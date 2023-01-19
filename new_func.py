@@ -1,4 +1,7 @@
 def get_sector(user_param, d):
     for i, x in enumerate(d):
-        return d[x] if user_param in d else d['last']
+        if i == len(d) - 1:
+            return d['last']
+        elif user_param in x:
+            return d[x]
 
